@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.fragment.AlbumFragment">
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/purple_500"
+        android:visibility="gone" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.make.dots.dotsindicator.DotsIndicator
+        android:id="@+id/dotsIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewPager"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="-50dp"
+        android:padding="6dp"
+        app:dot_drawable="@drawable/ic_selected_dot"
+        app:dot_drawable_unselected="@drawable/ic_dot_lightgrey"
+        app:dot_height="8dp"
+        app:dot_margin="6dp"
+        app:dot_width="8dp" />
+
+</RelativeLayout>
